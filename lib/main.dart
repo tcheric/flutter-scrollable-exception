@@ -70,13 +70,13 @@ class _ScrollingPageState extends State<ScrollingPage> {
           });
 
           // both jumpTo() and animateTo() cause the same exception
-          _scrollController.animateTo(
-            targetScrollOffset,
-              duration: Duration(milliseconds: 300),
-              curve: Curves.linear,
-          );
+          _scrollController.jumpTo(targetScrollOffset);
 
-          // _scrollController.jumpTo(targetScrollOffset);
+          // _scrollController.animateTo(
+          //   targetScrollOffset,
+          //   duration: Duration(milliseconds: 300),
+          //   curve: Curves.linear,
+          // );
         }
       });
     });
